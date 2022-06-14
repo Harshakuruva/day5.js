@@ -1,3 +1,4 @@
+// find the depth of an array//
 function getarrdepth(obj) {
     if (Array.isArray(obj)) return 1 + Math.max(...obj.map(t => getarrdepth(t)))
     else 
@@ -8,53 +9,60 @@ console.log(getarrdepth(arr))
 console.log(getarrdepth([1,[1]]));
 
 
-// var arr = new Array(2);
-// for (var i = 0; i < arr.length; i++) {
-// 	arr[i] = new Array(2);
-// }
-// var h = 1;
-// for (var i = 0; i < 2; i++) {
-// 	for (var j = 0; j < 2; j++) {
-// 		arr[i][j] = h++;
-// 	}
-// }
-// for (var i = 0; i < 2; i++) {
-// 	for (var j = 0; j < 2; j++) {
-// 		console.log(arr[i][j] + " ");
-// 	}
-// 	console.log("<br>");
-// // }
-			
-// function Boundary(a, m, n)
-// {
-//   let result = []
-// 	for (var i = 0; i < m; i++) {
-//     let b1 = []
-// 		for (var j = 0; j < n; j++) {
-// 			if (i == 0)
-// 				console.log(a[i][j] + '');
-// 			else if (i == m - 1)
-// 				console.log(a[i][j] + '');
-// 			else if (j == 0)
-// 				console.log(a[i][j] + '');
-// 			else if (j == n - 1)
-// 				console.log(a[i][j] + '');
-// 			else
-// 				console.log("");
-// 		}
-// 		console.log("");
-// 	}
-//   // a.slice(0,4);
-//   // return a;
-// }
-
-// var a = [ [ 1, 2, 3, 4 ],
-// 			[ 5, 6, 7, 8 ],
-// 			[ 1, 2, 3, 4 ],
-// 			[ 5, 6, 7, 8 ]];
-// console.log(Boundary(a,4,4))
 
 
+// 2*2 marix
+
+var arr = new Array(2);
+for (var i = 0; i < arr.length; i++) {
+	arr[i] = new Array(2);
+}
+var h = 1;
+for (var i = 0; i < 2; i++) {
+	for (var j = 0; j < 2; j++) {
+		arr[i][j] = h++;
+	}
+}
+for (var i = 0; i < 2; i++) {
+	for (var j = 0; j < 2; j++) {
+		console.log(arr[i][j] + " ");
+	}
+	console.log("<br>");
+ }
+	
+//Print the boundary of N*M matrix
+
+function Boundary(a, m, n)
+{
+  let result = []
+	for (var i = 0; i < m; i++) {
+    let b1 = []
+		for (var j = 0; j < n; j++) {
+			if (i == 0)
+				console.log(a[i][j] + '');
+			else if (i == m - 1)
+				console.log(a[i][j] + '');
+			else if (j == 0)
+				console.log(a[i][j] + '');
+			else if (j == n - 1)
+				console.log(a[i][j] + '');
+			else
+				console.log("");
+		}
+		console.log("");
+	}
+  // a.slice(0,4);
+  // return a;
+}
+
+var a = [ [ 1, 2, 3, 4 ],
+			[ 5, 6, 7, 8 ],
+			[ 1, 2, 3, 4 ],
+			[ 5, 6, 7, 8 ]];
+console.log(Boundary(a,4,4))
+
+
+//Print sum of boundary of N*M matrix
 function BouSum(a, m, n)
 {
 	let sum = 0;
